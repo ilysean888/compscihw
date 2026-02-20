@@ -1,0 +1,25 @@
+Sean C 
+Infinite Growth
+
+In this sketch, a circle grows in size as the mouse is moved around the canvas. Each time the mouse is pressed, the color of the circle changes randomly.
+
+let circleSize = 50;
+let circleColor = 0;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  background(220);
+
+  circleSize += 0.5;
+  
+  fill(circleColor, 100, 200);
+  ellipse(mouseX, mouseY, circleSize, circleSize);
+}
+
+function mousePressed() {
+  
+  circleColor = random(255);
+}
